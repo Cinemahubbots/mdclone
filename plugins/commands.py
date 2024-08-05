@@ -65,11 +65,10 @@ async def start(client, message):
             buttons.append([InlineKeyboardButton('ᴄʀᴇᴀᴛᴇ ʏᴏᴜʀ ᴏᴡɴ ᴄʟᴏɴᴇ ʙᴏᴛ', callback_data='clone')])
         reply_markup = InlineKeyboardMarkup(buttons)
         me2 = (await client.get_me()).mention
-        await client.send_message(
-            chat_id=message.chat.id,
-            reply_markup=reply_markup,
+        await message.reply_caption(
+            photo=random.choice(PICS),
             caption=script.START_TXT.format(message.from_user.mention, me2),
-            
+            reply_markup=reply_markup
         )
         return
 
@@ -240,7 +239,7 @@ async def start(client, message):
             )
             filetype = msg.media
             file = getattr(msg, filetype.value)
-            title = '@VJ_Botz  ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), file.file_name.split()))
+            title = '@AdishBio  ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), file.file_name.split()))
             size=get_size(file.file_size)
             f_caption = f"<code>{title}</code>"
             if CUSTOM_FILE_CAPTION:
@@ -418,6 +417,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id
+            )
 
         me2 = (await client.get_me()).mention
         await query.message.edit_text(
