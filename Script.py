@@ -37,20 +37,15 @@ If You Want To Remove Api Then Copy This And Send To Bot - `/api None`"""
 
 
 
-    ABOUT_TXT = """<b>ᴀʙᴏᴜᴛ ᴍᴇ</b>
-
+    ABOUT_TXT = """<b>ᴀʙᴏᴜᴛ ᴍᴇ
 ✰ ᴍʏ ɴᴀᴍᴇ: {}
-
 ✰ ᴍʏ ᴏᴡɴᴇʀ: : <a href=https://t.me/adishsuresh>MayFlower</a>
-
 ✰ sᴜᴘᴘᴏʀᴛ: <a href=https://t.me/Adishsuresh>Support</a>
-
 ✰ ᴜᴘᴅᴀᴛᴇs:  <a href=https://t.me/Adishbio>Updates</a>
+✰ ᴠᴇʀsɪᴏɴ: 0.7.6"""
 
-✰ ᴠᴇʀsɪᴏɴ: 0.7.6
-"""
 
-    CABOUT_TXT = """Hello {} ✨/n I am a permenant file store bot and users can access stored messages by using a shareable link given by me/n To know more click help button"""
+    CABOUT_TXT = """Hello {} ✨/n I am a permenant file store bot and users can access stored messages by using a shareable link given by me/n To know more click help button
 
 
 ✰ ᴍʏ ɴᴀᴍᴇ: {}
